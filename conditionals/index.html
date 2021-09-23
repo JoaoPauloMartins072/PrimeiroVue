@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aula de vue</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+  <div id="app">
+    <h1>Loops e condicionais</h1> 
+    <p v-show="showInput" >
+      <custom-input
+      type="text"
+      placeholder="name"
+      v-model="name"
+      />
+    </p>
+
+
+    <!-- <p v-if="me === 'admin" >
+      ultra master cool secret
+    </p>
+
+    <p v-else-if="me === 'editor'">
+      you're not an admin. you can't see it too
+    </p>
+
+    <p v-else>
+      you're not an admin
+    </p> -->
+    
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

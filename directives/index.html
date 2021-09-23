@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Diretivas</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+  <div id="app">
+    <label>
+
+      <input type="checkbox" v-model="showText">
+
+      Show Text
+
+
+    </label>
+    <!--Após uma diretiva ponto é o nome da diretiva (v-"diretiva.number")
+        Após uma diretiva os dois pontos é o argumento (v-"diretiva:number")-->
+
+    <p
+      v-bind:class="textClass"
+      v-if="showText"
+      >{{ text }}</p>
+    <a v-bind:[attr]="link">Link para o meu site</a>
+    <input type="number" v-model="number"
+      type="number"
+      v-model.number="number"  
+      v-on:keyup="sayHi"
+    >
+    <!-- v-bind:class="nome"  ===  :class="nome"
+         v-on mouseover="nome" ===  @mouseover="nome" -->
+
+    <button @mouseover="sayhi">
+      Say Hi !
+    </button>
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
