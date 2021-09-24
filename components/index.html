@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Componentes</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div id="app">
+
+    <custom-input 
+      label="Nome" 
+      placeholder="Nome Completo" 
+      id="usuario_nome" 
+      v-model="usuario.nome"
+    ></custom-input>
+
+    <custom-input 
+      label="Telefone" 
+      placeholder="Telefone com DDD" 
+      id="usuario_tel" 
+      v-model="usuario.telefone" 
+      :required="true"
+    ></custom-input>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
